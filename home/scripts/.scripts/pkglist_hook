@@ -1,0 +1,25 @@
+#!/usr/bin/env python3
+"""
+pkglist_hook.py, create pacman hook file for generating pkglist.
+
+The file will be named "pkglist.hook" under directory /etc/pacman.d/hooks.
+"""
+
+from os.path import isfile
+
+if isfile("/etc/pacman.d/hooks/pkglist.hook"):
+    print("Hook already exists.")
+    exit(1)
+
+with open("/etc/pacman.d/hooks/pkglist.hook", "w") as hook_handle:
+    hook_handle.write('''
+[Trigger]
+Operation = Install
+Operation = Remove
+Type = Package
+Target = *
+
+[Action]
+When = PostTransaction
+Exec = /bin/sh -c '/usr/bin/pacman -Qqe > /etc/pkglist.txt'
+''')

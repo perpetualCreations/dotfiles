@@ -1,0 +1,3 @@
+#!/usr/bin/sh
+
+cd "$HOME"/dotfiles/home && stow $(ls -d */ | grep -v "kde-shortcuts|wallpapers") -t "$HOME"

@@ -1,0 +1,21 @@
+#!/usr/bin/env python3
+"""
+pkglist_restore.py, read pkglist and install packages through yay.
+
+The pkglist file should be located on path /etc/pkglist.txt, \
+    and this script will default to pacman if yay is not found.
+"""
+
+from subprocess import call
+from shutil import which
+from os.path import isfile
+
+if not isfile("/etc/pkglist.txt"):
+    print("/etc/pkglist.txt missing.")
+    exit(1)
+
+COMMAND = "yay"
+if which("yay") is None:
+    COMMAND = "pacman"
+
+call(COMMAND + " -S --needed - < /etc/pkglist.txt", shell=True)
