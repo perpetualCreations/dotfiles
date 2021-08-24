@@ -9,7 +9,7 @@ Spotify theme from [4lgn/dotfiles](https://github.com/morpheusthewhite/spicetify
 GRUB theme from [adnan/grub2-gruvbox](https://git.fs.lmu.de/adnan/grub2-gruvbox).
 
 ## Requirements
-For running on Arch Linux, with an AMD CPU and Nvidia GPU.
+For running on Arch Linux.
 
 Requires KDE Plasma. Please remove the GRUB directory if you aren't using GRUB as your bootloader.
 
