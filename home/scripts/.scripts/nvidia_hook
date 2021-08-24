@@ -1,0 +1,35 @@
+#!/usr/bin/env python3
+"""
+nvidia_hook.py, create pacman hook file for updating initramfs.
+
+The file will be named "nvidia.hook" under directory /etc/pacman.d/hooks.
+"""
+
+from os.path import isfile, isdir
+from os import mkdir
+
+if isfile("/etc/pacman.d/hooks/nvidia.hook"):
+    print("Hook already exists.")
+    exit(1)
+
+if not isdir("/etc/pacman.d/hooks"):
+    mkdir("/etc/pacman.d/hooks")
+
+with open("/etc/pacman.d/hooks/nvidia.hook", "w") as hook_handle:
+    hook_handle.write('''
+[Trigger]
+Operation=Install
+Operation=Upgrade
+Operation=Remove
+Type=Package
+Target=nvidia
+Target=linux
+# Change the linux part above and in the Exec line for different kernels
+
+[Action]
+Description=Update Nvidia module in initcpio
+Depends=mkinitcpio
+When=PostTransaction
+NeedsTargets
+Exec=/bin/sh -c 'while read -r trg; do case $trg in linux) exit 0; esac; done; /usr/bin/mkinitcpio -P'
+''')

@@ -5,11 +5,15 @@ pkglist_hook.py, create pacman hook file for generating pkglist.
 The file will be named "pkglist.hook" under directory /etc/pacman.d/hooks.
 """
 
-from os.path import isfile
+from os.path import isfile, isdir
+from os import mkdir
 
 if isfile("/etc/pacman.d/hooks/pkglist.hook"):
     print("Hook already exists.")
     exit(1)
+
+if not isdir("/etc/pacman.d/hooks"):
+    mkdir("/etc/pacman.d/hooks")
 
 with open("/etc/pacman.d/hooks/pkglist.hook", "w") as hook_handle:
     hook_handle.write('''

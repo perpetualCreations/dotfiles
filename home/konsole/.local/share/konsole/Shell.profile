@@ -8,7 +8,7 @@ UseFontLineChararacters=true
 DefaultEncoding=UTF-8
 
 [General]
-Command=/bin/zsh
+Command=/bin/bash
 CursorShape=50
 Environment=TERM=xterm-256color,COLORTERM=truecolor
 Name=Shell
