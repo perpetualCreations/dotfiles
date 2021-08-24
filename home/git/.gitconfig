@@ -1,6 +1,7 @@
 [user]
-name = FilipeMCruz
-email = 1170911@isep.ipp.pt
+name = perpetualCreations
+email = tchen0584@gmail.com
+	signingkey = CEC38A8F1713E6A1067F4D7BECA6471AA89344DB
 
 [web]
 browser = firefox
@@ -260,3 +261,5 @@ send = "!f() { git add -A && git commit \"$@\" && git push; }; f"
 # theirs = "!f() { git checkout --theirs $@ && git add $@; }; f"
 # subrepo = !sh -c 'git filter-branch --prune-empty --subdirectory-filter $1 master' -
 # human = name-rev --name-only --refs=refs/heads/*
+[commit]
+	gpgsign = true

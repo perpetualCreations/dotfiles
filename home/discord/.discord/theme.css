@@ -1,7 +1,7 @@
 //META{"name":"Duvbox","description":"A Discord theme based on Gruvbox, a Vim theme","author":"CircuitRCAY","version":"1.6.0"}*//
 /**
     Duvbox - adapted for Discord
-    
+
     Made by CircuitRCAY (Circuit#2816)
 */
 
@@ -39,7 +39,7 @@ pre > code {
     --interactive-normal: #ebdbb2;
     --interactive-hover: #bdae93;
     --interactive-active: #fbf1c7;
-    
+
 }
 
 .theme-light {
@@ -462,7 +462,7 @@ div[class*="searchBox"] {
 
 div[class*="searchBox"] > div[class*="inputWrapper"] {
     background-color: var(--background-tertiary);
-    
+
 }
 
 div[class*="headerContentWrapper"] {
@@ -687,12 +687,12 @@ div[class*="contentContainer"] > div[class*="scroller"] > div[class*="contentWid
     padding: 0.5em;
     background: #282828;
 }
-  
+
 .theme-dark .hljs,
 .hljs-subst {
     color: #ebdbb2;
 }
-  
+
 /* Gruvbox Red */
 .theme-dark
 .hljs-deletion,
@@ -702,7 +702,7 @@ div[class*="contentContainer"] > div[class*="scroller"] > div[class*="contentWid
 .hljs-selector-tag {
     color: #fb4934;
 }
-  
+
 /* Gruvbox Blue */
 .theme-dark
 .hljs-built_in,
@@ -714,7 +714,7 @@ div[class*="contentContainer"] > div[class*="scroller"] > div[class*="contentWid
 .hljs-variable {
     color: #83a598;
 }
-  
+
 /* Gruvbox Yellow */
 .hljs-attr,
 .hljs-params,
@@ -722,7 +722,7 @@ div[class*="contentContainer"] > div[class*="scroller"] > div[class*="contentWid
 .hljs-type {
     color: #fabd2f;
 }
-  
+
 /* Gruvbox Purple */
 .theme-dark
 .hljs-builtin-name,
@@ -731,7 +731,7 @@ div[class*="contentContainer"] > div[class*="scroller"] > div[class*="contentWid
 .hljs-number {
     color: #8f3f71;
 }
-  
+
 /* Gruvbox Orange */
 .theme-dark
 .hljs-code,
@@ -741,7 +741,7 @@ div[class*="contentContainer"] > div[class*="scroller"] > div[class*="contentWid
 .hljs-template-variable {
     color: #fe8019;
 }
-  
+
 /* Gruvbox Green */
 .theme-dark
 .hljs-addition,
@@ -753,7 +753,7 @@ div[class*="contentContainer"] > div[class*="scroller"] > div[class*="contentWid
 .hljs-symbol {
     color: #b8bb26;
 }
-  
+
 /* Gruvbox Aqua */
 .theme-dark
 .hljs-attribute,
@@ -766,13 +766,13 @@ div[class*="contentContainer"] > div[class*="scroller"] > div[class*="contentWid
 .hljs-tag {
     color: #8ec07c;
 }
-  
+
 /* Gruvbox Gray */
 .theme-dark,
 .hljs-comment {
     color: #928374;
 }
-  
+
 /* Gruvbox Purple */
 .theme-dark
 .hljs-link_label,
@@ -780,13 +780,13 @@ div[class*="contentContainer"] > div[class*="scroller"] > div[class*="contentWid
 .hljs-number {
     color: #d3869b;
 }
-  
+
 .theme-dark
 .hljs-comment,
 .hljs-emphasis {
     font-style: italic;
 }
-  
+
 .theme-dark
 .hljs-section,
 .hljs-strong,
