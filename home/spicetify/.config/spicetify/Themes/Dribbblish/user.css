@@ -76,6 +76,18 @@ body {
     fill: var(--spice-sidebar-text) !important;
 }
 
+.main-addButton-active, .main-addButton-active:focus {
+    color: #b16286;
+}
+
+.main-addButton-active:hover {
+    color: #d3869b;
+}
+
+.progress-bar__fg {
+    background-color: #8ec07c;
+}
+
 .main-type-ballad {
     font-weight: 500;
 }
