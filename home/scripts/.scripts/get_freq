@@ -1,0 +1,21 @@
+#!/usr/bin/env python3
+"""
+get_freq, isolate current CPU frequency from /proc/cpuinfo, and print to \
+    console.
+
+Used by Conky for frequency graph.
+Creates temporary file /tmp/dotfiles_get_freq.
+"""
+
+from subprocess import call
+
+with open("/tmp/dotfiles_get_freq", "w") as out:
+    call("cat /proc/cpuinfo | grep 'cpu MHz'", shell=True, stdout=out)
+
+try:
+    with open("/tmp/dotfiles_get_freq") as get:
+        data = list(map(lambda x: float(x.split(":")[1]),
+                        [x for x in (get.read().split("\n")) if x != '']))
+        print(round((sum(data) / len(data)) / 1000, 2))
+except FileNotFoundError:
+    print(0)

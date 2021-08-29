@@ -1,0 +1,20 @@
+#!/usr/bin/env python3
+"""
+get_freq_percent, calls get_freq and gets percentage for Conky graphing.
+
+Creates temporary file /tmp/dotfiles_get_freq_percent.
+"""
+
+from subprocess import call
+
+# you should probably change this to whatever your CPU's max turbo is.
+MAX_TURBO_FREQUENCY_GHZ = 6
+
+with open("/tmp/dotfiles_get_freq_percent", "w") as out:
+    call("$HOME/.scripts/get_freq", shell=True, stdout=out)
+
+try:
+    with open("/tmp/dotfiles_get_freq_percent") as get:
+        print((float(get.read()) / MAX_TURBO_FREQUENCY_GHZ) * 100)
+except FileNotFoundError:
+    print(0)
