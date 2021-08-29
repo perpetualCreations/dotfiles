@@ -52,6 +52,30 @@ body {
     letter-spacing: normal;
 }
 
+/* yes, this hides banner ads. i've commented it out since it violates ToS, although I doubt it could be detected?
+   up to you, and your ethics. the difference between this and a DNS sinkhole is that Daniel Ek's wallet is drained,
+   and the display element for banner ads is just straight up gone, instead of just the image being missing. */
+
+/*
+.main-leaderboardComponent-container {
+    display: none;
+}
+*/
+
+#main > div > div.Root__top-container > div.Root__main-view > main > div.os-host.os-host-foreign.os-theme-spotify.os-host-resize-disabled.os-host-scrollbar-horizontal-hidden.main-view-container__scroll-node.os-host-transition.os-host-scrollbar-vertical-hidden > div.os-padding > div > div > div.main-view-container__scroll-node-child > section > div.main-gridContainer-gridContainer > div.main-heroCard-card.collection-collectionEntityHeroCard-container.collection-collectionEntityHeroCard-likedSongs {
+    background: none;
+    border: solid 1px var(--spice-text);
+}
+
+
+.main-collectionLinkButton-selected {
+    color: var(--spice-sidebar-text);
+}
+
+.main-collectionLinkButton-selected svg {
+    fill: var(--spice-sidebar-text) !important;
+}
+
 .main-type-ballad {
     font-weight: 500;
 }
@@ -162,6 +186,7 @@ span.artist-artistVerifiedBadge-badge svg > path:last-of-type {
 
 .main-navBar-navBarLinkActive {
     background: var(--spice-button);
+    color: var(--spice-sidebar-text) !important;
 }
 
 .main-contextMenu-menu {
@@ -173,6 +198,10 @@ span.artist-artistVerifiedBadge-badge svg > path:last-of-type {
 .main-contextMenu-menuItemButton:not(.main-contextMenu-disabled):focus,
 .main-contextMenu-menuItemButton:not(.main-contextMenu-disabled):hover {
     color: var(--spice-main);
+}
+
+.main-contextMenu-disabled {
+    color: rgba(var(--spice-rgb-selected-row), .8);
 }
 
 .main-playPauseButton-button {
@@ -268,9 +297,13 @@ span.artist-artistVerifiedBadge-badge svg > path:last-of-type {
 .main-nowPlayingBar-container {
     border-radius: 0 0 0 var(--main-corner-radius);
     background-color: unset;
-    background: radial-gradient(ellipse at right 50% bottom -80px, rgba(var(--spice-rgb-sidebar), 0.55), var(--spice-main) 60%);
+    background: var(--spice-main);
     border-top: 0;
     min-width: 518px;
+}
+
+.main-connectToFacebook-facebookButton {
+    background: inherit;
 }
 
 .main-connectBar-connectBar {
@@ -305,12 +338,16 @@ html {
     background-repeat: no-repeat;
 }
 
-.Root__nav-bar .link-subtle,
+.Root__nav-bar,
 .main-rootlist-rootlistItemLink:link,
 .main-rootlist-rootlistItemLink:visited,
 .main-rootlist-rootlistContent span,
 .main-navBar-entryPoints span {
-    color: var(--spice-sidebar-text)
+    color: inherit
+}
+
+.link-subtle {
+    color: var(--spice-text);
 }
 
 .main-navBar-navBarItem svg {
@@ -670,12 +707,12 @@ li.GlueDropTarget {
 .main-likedSongsButton-likedSongsIcon svg,
 .main-yourEpisodesButton-yourEpisodesIcon svg,
 .main-createPlaylistButton-createPlaylistIcon svg {
-    fill: var(--spice-sidebar-text);
+    fill: var(--spice-text);
     width: 32px;
     height: 32px;
 }
 .main-yourEpisodesButton-yourEpisodesIcon svg path {
-    fill: var(--spice-sidebar-text);
+    fill: var(--spice-text);
 }
 
 /** Grid */
