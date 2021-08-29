@@ -227,7 +227,7 @@ span.artist-artistVerifiedBadge-badge svg > path:last-of-type {
 
 .Root__main-view {
     background-color: var(--spice-main);
-    border-radius: var(--main-corner-radius) var(--main-corner-radius) 0 0;
+    border-radius: var(--main-corner-radius) 0 0 0;
     overflow: hidden;
 }
 
@@ -266,7 +266,7 @@ span.artist-artistVerifiedBadge-badge svg > path:last-of-type {
 }
 
 .main-nowPlayingBar-container {
-    border-radius: 0 0 var(--main-corner-radius) var(--main-corner-radius);
+    border-radius: 0 0 0 var(--main-corner-radius);
     background-color: unset;
     background: radial-gradient(ellipse at right 50% bottom -80px, rgba(var(--spice-rgb-sidebar), 0.55), var(--spice-main) 60%);
     border-top: 0;
