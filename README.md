@@ -8,6 +8,9 @@ Spotify theme from [4lgn/dotfiles](https://github.com/morpheusthewhite/spicetify
 
 GRUB theme from [adnan/grub2-gruvbox](https://git.fs.lmu.de/adnan/grub2-gruvbox).
 
+FCITX5 theme from [ayamir/fcitx5-gruvbox](https://github.com/ayamir/fcitx5-gruvbox). Shows up when using 中文拼音, be sure to install proper non-latin font packages, otherwise you'll end up with unicode placeholder characters.
+Noto (for simplified Chinese, Mandarin) is decently modern, the package name is `noto-fonts-sc`.
+
 ## Requirements
 For running on Arch Linux.
 
@@ -33,7 +36,7 @@ The latter is not recommended if you aren't using a Nvidia GPU on your machine.
 This requires the `stow` and `python` package. Please install them with `sudo pacman -S stow python`.
 
 To customize which modules to load or not load, simply remove the associated directory before running `stow_all`.
-`stow_all` may fail if dotfiles already exist in the user home directory.
+`stow_all` may fail if dotfiles already exist in the target directory.
 
 Please note, as mentioned in the second stop, the `stow`-based installation method creates symbolic links.
 Don't delete the dotfiles repository directory, this'll take the actual configurations with it when removed.
@@ -57,3 +60,10 @@ The majority of consumer-grade machines will probably not require this modificat
 The CPU frequency presented is the average of all cores, the default configuration Conky generates only pulls frequency data from the first core.
 
 If your main network interface is not `wlan0`, please change the Conky configuration at `.config/conky/conky.conf`, replacing all instances of `wlan0` with your network interface's name.
+
+### Glava
+Mildly unstable in testing.
+
+Works best with `gruvbox-waterfall-modded.jpg` or `gruvbox-waterfall.jpg`, and other light wallpapers, otherwise the audio bars won't be visible.
+
+Alternatively, you can change the bar color to fit dark backgrounds by editing `~/.config/glava/bars.glsl` and replacing `#282828` with `#ebdbb2`.

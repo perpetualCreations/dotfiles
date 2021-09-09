@@ -1,13 +1,14 @@
 
 /* Vertical scale, larger values will amplify output */
-#define VSCALE 150
+#define VSCALE 300
 /* Rendering direction, either -1 (outwards) or 1 (inwards). */
 #define DIRECTION 1
+
 /* Color gradient scale, (optionally) used in `COLOR` macro */
 #define GRADIENT_SCALE 75
 /* Color definition. By default this is a gradient formed by mixing two colors.
    `pos` represents the pixel position relative to the visualizer baseline. */
-#define COLOR mix(#35292D, #E4CDA4, clamp(pos / GRADIENT_SCALE, 0, 1))
+#define COLOR mix(#802A2A, #4F4F92, clamp(pos / GRADIENT_SCALE, 0, 1))
 /* 1 to draw outline, 0 to disable */
 #define DRAW_OUTLINE 0
 /* 1 to draw edge highlight, 0 to disable */
@@ -22,6 +23,7 @@
 #define JOIN_CHANNELS 0
 /* 1 to invert (vertically), 0 otherwise */
 #define INVERT 0
+
 /* Gravity step, overrude from `smooth_parameters.glsl` */
 #request setgravitystep 2.4
 
