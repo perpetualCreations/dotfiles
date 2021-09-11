@@ -1,0 +1,4 @@
+#!/usr/bin/sh
+
+# shamelessly stolen from the arch wiki
+sudo -u X_user DISPLAY=:0 DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/X_userid/bus notify-send "S.M.A.R.T Error ($SMARTD_FAILTYPE)" "$SMARTD_MESSAGE" --icon=dialog-warning
