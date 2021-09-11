@@ -62,8 +62,15 @@ The CPU frequency presented is the average of all cores, the default configurati
 If your main network interface is not `wlan0`, please change the Conky configuration at `.config/conky/conky.conf`, replacing all instances of `wlan0` with your network interface's name.
 
 ### Glava
-Mildly unstable in testing.
+Doesn't autostart very well, however otherwise works fine.
 
 Works best with `gruvbox-waterfall-modded.jpg` or `gruvbox-waterfall.jpg`, and other light wallpapers, otherwise the audio bars won't be visible.
 
 Alternatively, you can change the bar color to fit dark backgrounds by editing `~/.config/glava/bars.glsl` and replacing `#282828` with `#ebdbb2`.
+
+### Bash
+The `.bashrc` file contains an alias for this [wonderful command](https://github.com/nvbn/thefuck). Feel free to remove it if you don't plan using said wonderful command yourself.
+
+It really helps with typing `yay -Syu` wrong on Mondays.
+
+Also it runs `neofetch` every time Bash starts. Enjoy.
