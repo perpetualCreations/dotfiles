@@ -25,7 +25,13 @@ done
 # print horizontal rules, neofetch, and LC quote
 
 echo "${hr}"
+echo "Good morning, afternoon, or evening, operator." 
+echo
+echo
 neofetch
 echo "FACE THE FEAR, BUILD THE FUTURE."
 echo "WELCOME TO OUR CORP."
 echo "${hr}"
+
+alias futurecandy='python -m futurecandy'
+alias futurecandyrc='python -m futurecandy.extra'

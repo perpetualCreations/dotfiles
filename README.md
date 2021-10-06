@@ -69,8 +69,12 @@ Works best with `gruvbox-waterfall-modded.jpg` or `gruvbox-waterfall.jpg`, and o
 Alternatively, you can change the bar color to fit dark backgrounds by editing `~/.config/glava/bars.glsl` and replacing `#282828` with `#ebdbb2`.
 
 ### Bash
-The `.bashrc` file contains an alias for this [wonderful command](https://github.com/nvbn/thefuck). Feel free to remove it if you don't plan using said wonderful command yourself.
+The `.bashrc` file contains aliases for the following commands,
+* [This wonderful command](https://github.com/nvbn/thefuck).
+* [futurecandy](https://dreamerslegacy.xyz/git/perpetualCreations/futurecandy).
 
-It really helps with typing `yay -Syu` wrong on Mondays.
+Feel free to remove theses aliases if you don't plan using said wonderful commands yourself.
 
-Also it runs `neofetch` every time Bash starts. Enjoy.
+The first really helps with typing `yay -Syu` wrong on Mondays.
+
+Also the RC file runs `neofetch` every time Bash starts. Enjoy.

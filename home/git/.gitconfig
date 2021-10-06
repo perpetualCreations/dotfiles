@@ -263,3 +263,5 @@ send = "!f() { git add -A && git commit \"$@\" && git push; }; f"
 # human = name-rev --name-only --refs=refs/heads/*
 [commit]
 	gpgsign = true
+[init]
+	defaultBranch = main
