@@ -1,0 +1,3 @@
+[submodule "home/joplin/.config/joplin-desktop/joplin-theme-dark-gruvbox"]
+	path = home/joplin/.config/joplin-desktop/joplin-theme-dark-gruvbox
+	url = https://dreamerslegacy.xyz/git/perpetualCreations/joplin-theme-dark-gruvbox
