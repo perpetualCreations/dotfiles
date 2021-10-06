@@ -78,3 +78,8 @@ Feel free to remove theses aliases if you don't plan using said wonderful comman
 The first really helps with typing `yay -Syu` wrong on Mondays.
 
 Also the RC file runs `neofetch` every time Bash starts. Enjoy.
+
+### Spotify
+Client updates have completely broken the custom stylesheet for Spotify; the source Spicetify theme, Dribbish, hasn't been updated.
+
+May need to port a theme from somewhere else that is still being actively maintained. For now, drop the included configuration, or at least don't apply it.
