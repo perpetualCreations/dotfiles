@@ -5,33 +5,42 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
+# don't put duplicate lines or lines starting with space in the history.
+# See bash(1) for more options
+HISTCONTROL=ignoreboth
+
+# append to the history file, don't overwrite it
+shopt -s histappend
+
+# for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
+HISTSIZE=1000
+HISTFILESIZE=2000
+
+# check the window size after each command and, if necessary,
+# update the values of LINES and COLUMNS.
+shopt -s checkwinsize
+
+if [ -f ~/.bash_aliases ]; then
+    . ~/.bash_aliases
+fi
+
+# enable programmable completion features (you don't need to enable
+# this, if it's already enabled in /etc/bash.bashrc and /etc/profile
+# sources /etc/bash.bashrc).
+if ! shopt -oq posix; then
+  if [ -f /usr/share/bash-completion/bash_completion ]; then
+    . /usr/share/bash-completion/bash_completion
+  elif [ -f /etc/bash_completion ]; then
+    . /etc/bash_completion
+  fi
+fi
+
 alias ls='ls --color=auto'
 PS1='[\u@\h \W]\$ '
 
 eval "$(thefuck --alias)"
 
-# first time i've written anything original in bash.
-
-hr=""
-
-# populate horizontal rule with equal signs, the
-# number of which equal to the number of columns the
-# console has.
-
-for ((i=0; i<$(tput cols); i++)); do
-    hr="${hr}="
-done
-
-# print horizontal rules, neofetch, and LC quote
-
-echo "${hr}"
-echo "Good morning, afternoon, or evening, operator." 
-echo
-echo
-neofetch
-echo "FACE THE FEAR, BUILD THE FUTURE."
-echo "WELCOME TO OUR CORP."
-echo "${hr}"
+~/.scripts/rcbanner
 
 alias futurecandy='python -m futurecandy'
 alias futurecandyrc='python -m futurecandy.extra'

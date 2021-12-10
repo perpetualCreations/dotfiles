@@ -1,0 +1,3 @@
+#!/bin/bash
+ln -s ~/dotfiles/sddmsugar/theme.conf /usr/share/sddm/themes/sugar-dark/theme.conf
+ln -s ~/dotfiles/home/wallpapers/gruvbox-waterfall.jpg /usr/share/sddm/themes/sugar-dark/gruvbox-waterfall.jpg

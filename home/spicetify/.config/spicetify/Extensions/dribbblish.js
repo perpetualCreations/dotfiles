@@ -152,7 +152,7 @@ waitForElement([".Root__main-view .os-resize-observer-host"], ([resizeHost]) => 
     progBar.append(tooltip);
 
     const progKnob = progBar.querySelector(".progress-bar__slider");
-    
+
     function updateProgTime({ data: e }) {
         const offsetX = progKnob.offsetLeft + progKnob.offsetWidth / 2;
         const maxWidth = progBar.offsetWidth;

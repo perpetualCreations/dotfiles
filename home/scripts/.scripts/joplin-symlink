@@ -1,2 +1,0 @@
-#!/usr/bin/sh
-ln -s ~/.config/joplin-desktop/joplin-theme-dark-gruvbox/userchrome.css ~/.config/joplin-desktop/userchrome.css && ln -s ~/.config/joplin-desktop/joplin-theme-dark-gruvbox/userstyle.css ~/.config/joplin-desktop/userstyle.css

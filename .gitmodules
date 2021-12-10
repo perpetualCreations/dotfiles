@@ -1,3 +1,6 @@
 [submodule "home/joplin/.config/joplin-desktop/joplin-theme-dark-gruvbox"]
 	path = home/joplin/.config/joplin-desktop/joplin-theme-dark-gruvbox
 	url = https://dreamerslegacy.xyz/git/perpetualCreations/joplin-theme-dark-gruvbox
+[submodule "home/zsh/.oh-my-zsh/custom/plugins/zsh-autosuggestions"]
+	path = home/zsh/.oh-my-zsh/custom/plugins/zsh-autosuggestions
+	url = https://github.com/zsh-users/zsh-autosuggestions

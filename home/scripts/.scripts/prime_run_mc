@@ -1,5 +1,0 @@
-#!/usr/bin/sh
-
-# set your java executable in the launcher to this file, be sure to chmod +x it first!
-
-prime-run java "$@"
