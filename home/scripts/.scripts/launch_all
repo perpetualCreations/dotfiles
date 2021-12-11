@@ -1,3 +1,6 @@
 #!/bin/bash
+killall -q polybar
+killall -q conky
 conky --daemonize
+# polybar bar1 2>&1 | tee -a /tmp/polybar1.log & disown
 ~/.glava_start

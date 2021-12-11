@@ -1,0 +1,2 @@
+configuration {
+    modi: "window,run,ssh";

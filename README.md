@@ -16,13 +16,15 @@ Noto (for simplified Chinese, Mandarin) is decently modern, the package name is 
 Icon theme from [adhe/gruvboxplasma](https://www.opencode.net/adhe/gruvboxplasma), replacing original author's icon-set.
 
 ## Requirements
-For running on Arch Linux or Debian 11 (Bullseye).
+For running on Arch Linux, 1920x1080 resolution.
 
-Requires KDE Plasma. Please remove the GRUB directory if you aren't using GRUB as your bootloader.
+Requires KDE Plasma (all-in-one desktop environment, legacy) or AwesomeWM (window manager) + Polybar (bar) + Rofi (application launcher).
+
+Please remove the GRUB directory if you aren't using GRUB as your bootloader.
 
 [Neofetch is mandatory.](https://github.com/dylanaraps/neofetch) Do not resist. (if you do want to use something else though, edit `.scripts/rcbanner` and replace `neofetch` with your favorite flashy system information tool)
 
-Installation (and a bunch of customzations) requires the `stow` and `python` package. Please install them with `sudo pacman -S stow python` on Arch or `sudo apt install python3 stow` on Debian.
+Installation (and a bunch of customzations) requires the `stow` and `python` package. Please install them with `sudo pacman -S stow python` on Arch.
 
 ## Install
 Run `chmod +x dotfiles/home/scripts/.scripts/stow_all && dotfiles/home/scripts/.scripts/stow_all && chmod +x $HOME/.scripts/chmod_scripts && $HOME/.scripts/chmod_scripts`.
