@@ -51,7 +51,7 @@ bindsym $mod+Return exec kitty
 bindsym $mod+Shift+q kill
 
 # start dmenu (a program launcher)
-bindsym $mod+d exec --no-startup-id dmenu_run
+bindsym $mod+shift+d exec --no-startup-id dmenu_run
 # A more modern dmenu replacement is rofi:
 # bindcode $mod+40 exec "rofi -modi drun,run -show drun"
 # There also is i3-dmenu-desktop which only displays applications shipping a
@@ -100,7 +100,8 @@ bindsym $mod+e layout toggle split
 bindsym $mod+Shift+space floating toggle
 
 # change focus between tiling / floating windows
-bindsym $mod+space focus mode_toggle
+# disabled because i have fcitx running.
+# bindsym $mod+space focus mode_toggle
 
 # focus the parent container
 bindsym $mod+a focus parent
@@ -199,3 +200,9 @@ client.placeholder #1d2021 #1d2021 #ebdbb2
 exec --no-startup-id $HOME/.scripts/launch_all
 exec --no-startup-id feh --bg-scale $HOME/dotfiles/home/wallpapers/gruvbox-waterfall-modded.jpg
 exec --no-startup-id picom -b --config $HOME/.config/picom.conf
+
+# screenshot keybind.
+bindsym $mod+shift+s exec flameshot gui
+# we're replacing drun with our fancy rofi launcher.
+bindsym $mod+d exec $HOME/.config/rofi/launcher.sh
+  
