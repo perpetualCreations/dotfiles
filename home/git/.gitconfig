@@ -12,6 +12,9 @@ autocrlf = input
 [url "git@github.com:"]
 insteadOf = https://github.com/
 
+[url "ssh://git@dreamerslegacy.xyz:1984/"]
+insteadOf = https://dreamerslegacy.xyz/git/
+
 [url "ssh://git@bitbucket.org/"]
 insteadOf = https://bitbucket.org/
 
