@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+
+count=0
+connected=""
+disconnected=""
+
+ID="$(ip link | awk '/state UP/ {print $2}')"
+# changed some hostnames to common DNS servers, since those are more robust,
+# also unlike domain names they don't hinge on whether this machine can resolve hostnames.
+# removed ping for archlinux.org, we only annoy large evil tech corporations with a packet every 25 seconds.
+while true; do
+    if (ping -c 1 google.com || ping -c 1 8.8.4.4 || ping -c 1 8.8.8.8 || ping -c 1 1.1.1.1) &>/dev/null; then
+        if [[ $ID == e* ]]; then
+            echo "$connected Online" ; sleep 25
+        else
+            echo "$connected Online" ; sleep 25
+        fi
+    else
+        echo "$disconnected Offline" ; sleep 5
+    fi
+done

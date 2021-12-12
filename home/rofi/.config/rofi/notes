@@ -1,0 +1,3 @@
+Modified all of the menus to work outside of the ecosystem they were ripped out of.
+
+backlight, battery, and volume although partially patched, are not implemented in polybar.

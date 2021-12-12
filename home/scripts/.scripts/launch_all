@@ -1,6 +1,9 @@
 #!/bin/bash
-killall -q polybar
+
+# kill any previous instance(s) of conky, then launch conky again
 killall -q conky
 conky --daemonize
-# polybar bar1 2>&1 | tee -a /tmp/polybar1.log & disown
+# start glava audio visualizer
 ~/.glava_start
+# launch polybar
+bash ~/.config/polybar/hack/launch.sh

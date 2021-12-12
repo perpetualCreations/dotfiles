@@ -1,5 +1,5 @@
 # Dotfiles
-*hippity-hoppity, your dotfiles are now my property.*
+~~*hippity-hoppity, your dotfiles are now my property.*~~
 
 ## Acknowledgements
 Forked from [FilipeMCruz/dotfiles](https://github.com/FilipeMCruz/dotfiles/).
@@ -13,12 +13,23 @@ Noto (for simplified Chinese, Mandarin) is decently modern, the package name is 
 
 `bonsai` shell toy from [jallbrit/bonsai.sh](https://gitlab.com/jallbrit/bonsai.sh/-/tree/master).
 
-Icon theme from [adhe/gruvboxplasma](https://www.opencode.net/adhe/gruvboxplasma), replacing original author's icon-set.
+Polybar theme modified for color aesthetics and functionality from [adi1090x/polybar-themes](https://github.com/adi1090x/polybar-themes).
+
+Rofi themes modified for color aesthetics and functionality from [adi1090x](https://github.com/adi1090x/rofi).
+
+## Legal
+Redistributed code is either:
+
+* Distributed with the original license, as per usually required.
+* If the original license is unavailable, however the source is (unlawfully) forked from elsewhere, is distributed with the license given from further upstream.
+* If the original license is unavailable, and the code originates from, at the time of access, a public Github repository, in [accordance to Github's Terms of Service](https://docs.github.com/en/github/site-policy/github-terms-of-service#5-license-grant-to-other-users) is freely redistributed through Github (this repository should have a Github mirror).
+
+This is not legal advice. *Please don't sue me.*
 
 ## Requirements
 For running on Arch Linux, 1920x1080 resolution.
 
-Requires KDE Plasma (all-in-one desktop environment, legacy) or AwesomeWM (window manager) + Polybar (bar) + Rofi (application launcher).
+Requires KDE Plasma (all-in-one desktop environment, legacy) or i3-gaps (window manager) + Polybar (bar) + Rofi (application launcher).
 
 Please remove the GRUB directory if you aren't using GRUB as your bootloader.
 
@@ -42,7 +53,6 @@ To customize which modules to load or not load, simply remove the associated dir
 Please note, as mentioned in the second stop, the `stow`-based installation method creates symbolic links.
 Don't delete the dotfiles repository directory, this'll take the actual configurations with it when removed.
 
-### Arch-Specific
 You may additionally want to run `.scripts/pkglist_hook` and `.scripts/nvidia_hook` to create `pacman` hooks for,
 
 - Creating a list of installed packages, written to file `/etc/pkglist.txt`, every time packages are installed/removed.
@@ -51,6 +61,10 @@ You may additionally want to run `.scripts/pkglist_hook` and `.scripts/nvidia_ho
 The latter is not recommended if you aren't using a Nvidia GPU on your machine.
 
 To restore the package list, run `~/.scripts/pkglist_restore`.
+
+Customizations try to use the Fira Code font where possible. Please install `ttf-fira-code`.
+
+Read below for extended setup and information for each customization module.
 
 ### Git Configuration
 Be sure to correct the `.gitconfig` file and change the user name and user email, and also the signing key ID.
@@ -71,6 +85,9 @@ The majority of consumer-grade machines will probably not require this modificat
 The CPU frequency presented is the average of all cores, the default configuration Conky generates only pulls frequency data from the first core.
 
 If your main network interface is not `wlan0`, please change the Conky configuration at `.config/conky/conky.conf`, replacing all instances of `wlan0` with your network interface's name.
+
+For transparency to work, please make sure your system as a compositor. Some window managers (i.e kwin) have a compositor bundled.
+i3 does not, you'll need to install something like `picom`.
 
 ### Glava
 Doesn't autostart very well, however otherwise works fine.
@@ -104,3 +121,20 @@ See [Spicetify's instructions for installation](https://github.com/khanhas/spice
 Includes nice-to-have cheatsheets in the terminal. [Installation instructions at their repository](https://github.com/denisidoro/navi).
 
 Also includes a cheatsheet for commands in `~/.script`, in case you forgot what they do.
+
+### Polybar
+Edit `~/.config/polybar/hack/modules.ini` and scroll to section `module/temperature`.
+
+Welcome to UNIX, where everything is a file. You'll be asked to run `sensors` and then `for i in /sys/class/hwmon/hwmon*/temp*_input; do echo "$(<$(dirname $i)/name): $(cat ${i%_*}_label 2>/dev/null || echo $(basename ${i%_*})) $(readlink -f $i)"; done` to find the correct temperature sensor and its associated location in the filesystem.
+
+When you do find it, replace the value of `hwmon-path` with the correct path.
+
+Consider tweaking some of the other configuration values as needed, including thermal zones.
+
+The bar icons are provided through a font, please install `siji-ng`.
+
+### feh
+i3 does not have wallpaper support built-in. Please install `feh` to load wallpaper images, and edit the i3 configuration file to change the loaded image.
+
+### Rofi
+Please install `ttf-icomoon-feather` and `papirus-icon-theme`.
